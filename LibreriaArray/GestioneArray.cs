@@ -21,8 +21,19 @@ namespace LibreriaArray
             {
                 Console.Write(array[i]+" ");
             }
+            Console.WriteLine("");
 
         }
+        public static int[] CopiaArray(int[] array)
+        {
+            int[] array2 = new int[array.Length];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array2[i] = array[i];
+            }
+               
 
+            return array2;
+        }
     }
 }
