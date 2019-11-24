@@ -35,5 +35,68 @@ namespace LibreriaArray
 
             return array2;
         }
+        public static bool RicercaArray(int [] array, int elemento)
+        {
+            bool ricerca = false;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == elemento)
+                    trovato = true;
+            }
+            return ricerca;
+        }
+        public static bool SonoUguali(int [] array1, int [] array2)
+        {
+            if (array1.Length != array2.Length)
+                return false;
+            bool risultato = true;
+            for (int i = 0; i < array1.Length; i++)
+            {
+                if (array1[i] != array2[i])
+                    risultato = false;
+            }
+            return risultato;
+        }
+        public static int CercaMax(int[] array)
+        {
+            int max = int.MinValue;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > max)
+                    max = array[i];
+            }
+            return max;
+        }
+        public static int CercaMin(int[] array)
+        {
+            int min = int.MaxValue;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] < min)
+                    min = array[i];
+            }
+            return min;
+        }
+        public static bool Crescente (int [] array)
+        {
+            bool risposta = true;
+            for ( int i = 1; i < array.Length; i++)
+            {
+                if (array[i] <= array[i - 1])
+                    risposta = false;
+            }
+            return risposta;
+        }
+        public static bool Decrescente(int[] array)
+        {
+            bool risultato = true;
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] >= array[i - 1])
+                    risultato = false;
+            }
+            return risultato;
+            
+        }
     }
 }
