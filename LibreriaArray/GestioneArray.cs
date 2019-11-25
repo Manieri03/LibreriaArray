@@ -41,7 +41,7 @@ namespace LibreriaArray
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] == elemento)
-                    trovato = true;
+                    ricerca = true;
             }
             return ricerca;
         }
@@ -97,6 +97,29 @@ namespace LibreriaArray
             }
             return risultato;
             
+        }
+        public static void RiempiArray(int [] array)
+        {
+            Random random = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = random.Next(); ;
+            }
+
+        }
+        public static int[] UnisciArray(int[] array1, int[] array2)
+        {
+            int []Merge = new int[array1.Length + array2.Length];
+            for (int i = 0; i < array1.Length; i++)
+            {
+                Merge[i] = array1[i];
+            }
+            for (int i = array1.Length+1; i < Merge.Length; i++)
+            {
+                Merge[i] = array2[i-array1.Length];
+            }
+            return Merge ;
+
         }
     }
 }
